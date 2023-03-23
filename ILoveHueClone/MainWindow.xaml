@@ -6,7 +6,45 @@
         xmlns:local="clr-namespace:ILoveHueClone"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+	<Grid Margin="10">
 
-    </Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<Label>Schnames</Label>
+		<ListBox Grid.Row="1" x:Name="lstNames"/>
+
+		<StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+			<TextBox x:Name="txtName"/>
+			<Button x:Name="btnAdd" Margin="0,5,0,0" Click="ButtonAddName_Click">Add Name</Button>
+			<Button x:Name="btnColorThing" Margin="0,5,0,0" Click="ButtonColorThing_Click">Do Color Thing</Button>
+		</StackPanel>
+
+		<Grid Grid.Row="2" x:Name="colorGrid">
+			
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<Rectangle Grid.Column="0" Grid.Row="0" Fill="Orchid"/>
+			<Rectangle Grid.Column="1" Grid.Row="0" Fill="Teal"/>
+
+		</Grid>
+
+	</Grid>
 </Window>
